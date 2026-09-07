@@ -1,0 +1,411 @@
+/* --- CSS Variables & Reset --- */
+:root {
+    --primary-color: #ffb347; /* Orange Gold */
+    --secondary-color: #232323; /* Dark Grey */
+    --text-light: #ffffff;
+    --text-dark: #333;
+    --bg-light: #f9f9f9;
+    --hover-shadow: 0 20px 30px rgba(0,0,0,0.2);
+    --transition-speed: 0.3s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+}
+
+a { 
+    text-decoration: none; 
+    color: inherit; 
+}
+
+ul { 
+    list-style: none; 
+}
+
+/* --- Header & Navigation --- */
+header {
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 1rem 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+
+.logo span { 
+    color: var(--primary-color); 
+}
+
+.nav-links { 
+    display: flex; 
+    gap: 20px; 
+}
+
+.nav-links a {
+    font-weight: 500;
+    padding: 5px 10px;
+    position: relative;
+    transition: color var(--transition-speed);
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: width var(--transition-speed);
+}
+
+.nav-links a:hover { 
+    color: var(--primary-color); 
+}
+
+.nav-links a:hover::after { 
+    width: 100%; 
+}
+
+.menu-btn { 
+    display: none; 
+    font-size: 1.5rem; 
+    cursor: pointer; 
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    position: relative;
+    height: 80vh;
+    overflow: hidden;
+    margin-top: 70px;
+}
+
+.slider {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    background-size: cover;
+    background-position: center;
+}
+
+.slide.active { 
+    opacity: 1; 
+}
+
+.slide-content {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    background: rgba(0,0,0,0.6);
+    padding: 30px;
+    border-radius: 10px;
+    color: white;
+    max-width: 500px;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.8s ease 0.3s;
+}
+
+.slide.active .slide-content {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.slide-content h2 { 
+    font-size: 2.5rem; 
+    margin-bottom: 10px; 
+}
+
+.slide-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 25px;
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    border-radius: 25px;
+    font-weight: 600;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.slide-btn:hover {
+    transform: scale(1.05);
+    background: white;
+}
+
+/* --- Guidance Section --- */
+.guidance-section {
+    padding: 80px 20px;
+    background: white;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: var(--secondary-color);
+}
+
+.section-title span { 
+    color: var(--primary-color); 
+}
+
+.steps-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.step-card {
+    background: var(--bg-light);
+    padding: 30px;
+    border-radius: 15px;
+    width: 300px;
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    border-bottom: 4px solid transparent;
+}
+
+.step-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--hover-shadow);
+    border-bottom-color: var(--primary-color);
+}
+
+.step-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.step-card h3 { 
+    margin-bottom: 10px; 
+}
+
+.step-card p { 
+    color: #666; 
+    font-size: 0.9rem; 
+}
+
+/* --- Fleet Section --- */
+.fleet-section {
+    padding: 80px 20px;
+    background-color: var(--bg-light);
+}
+
+.fleet-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.vehicle-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: all var(--transition-speed);
+    position: relative;
+}
+
+.vehicle-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.vehicle-img-box {
+    height: 220px;
+    overflow: hidden;
+    position: relative;
+}
+
+.vehicle-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.vehicle-card:hover .vehicle-img-box img {
+    transform: scale(1.1);
+}
+
+.vehicle-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: var(--primary-color);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: white;
+}
+
+.vehicle-info { 
+    padding: 20px; 
+    text-align: center; 
+}
+
+.vehicle-info h3 { 
+    font-size: 1.3rem; 
+    margin-bottom: 5px; 
+}
+
+.vehicle-info .price { 
+    color: var(--primary-color); 
+    font-weight: 700; 
+    font-size: 1.1rem; 
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 15px 0;
+    color: #777;
+    font-size: 0.85rem;
+}
+
+.book-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: var(--secondary-color);
+    color: white;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.book-btn:hover { 
+    background: var(--primary-color); 
+}
+
+/* --- Footer --- */
+footer {
+    background: var(--secondary-color);
+    color: #ccc;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.footer-content { 
+    max-width: 800px; 
+    margin: auto; 
+}
+
+.footer-logo {
+    color: white; 
+    margin-bottom: 10px;
+}
+
+.contact-details { 
+    margin: 20px 0; 
+}
+
+.contact-details p { 
+    margin: 5px 0; 
+    font-size: 0.95rem; 
+}
+
+.socials { 
+    margin: 20px 0; 
+}
+
+.socials a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 5px;
+    background: #333;
+    border-radius: 50%;
+    color: white;
+    transition: background 0.3s;
+}
+
+.socials a:hover { 
+    background: var(--primary-color); 
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        gap: 15px;
+        transform: translateY(-150%);
+        transition: transform 0.3s ease;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+    
+    .nav-links.active { 
+        transform: translateY(0); 
+    }
+
+    .menu-btn { 
+        display: block; 
+    }
+
+    .slide-content { 
+        left: 20px; 
+        right: 20px; 
+        padding: 20px;
+        bottom: 30px;
+    }
+
+    .slide-content h2 { 
+        font-size: 1.8rem; 
+    }
+
+    .fleet-grid { 
+        grid-template-columns: 1fr; 
+    }
+}

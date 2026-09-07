@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUDDASSIR SHAHZAD Transport - Luxury & Economy Rentals</title>
+    
+    <!-- External CSS Link -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Google Fonts & Font Awesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">SHAHZAD<span>Movers</span></div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#fleet">Our Fleet</a></li>
+                <li><a href="#guide">How it Works</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="menu-btn" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Slider -->
+    <section class="hero-section" id="home">
+        <div class="slider">
+            <!-- Slide 1 -->
+            <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80');">
+                <div class="slide-content">
+                    <h2>Toyota Land Cruiser</h2>
+                    <p>Conquer any terrain with the ultimate luxury SUV. Perfect for family trips and off-road adventures.</p>
+                    <a href="#fleet" class="slide-btn">View Fleet</a>
+                </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80');">
+                <div class="slide-content">
+                    <h2>Business Class Sedans</h2>
+                    <p>Corolla & Civic available for comfortable city travel and business meetings.</p>
+                    <a href="#fleet" class="slide-btn">Book Now</a>
+                </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1559416523-140ddc3d238c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80');">
+                <div class="slide-content">
+                    <h2>Group Transport</h2>
+                    <p>Toyota Hiace for family tours and large groups. Safe, reliable, and spacious.</p>
+                    <a href="#fleet" class="slide-btn">Get Quote</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guidance Section -->
+    <section class="guidance-section" id="guide">
+        <h2 class="section-title">Easy <span>Booking</span> Process</h2>
+        <div class="steps-container">
+            <div class="step-card">
+                <div class="step-icon"><i class="fas fa-car-side"></i></div>
+                <h3>1. Choose Vehicle</h3>
+                <p>Select from our wide range of Sedans, SUVs, and Vans based on your comfort and budget needs.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-icon"><i class="fas fa-calendar-check"></i></div>
+                <h3>2. Book & Confirm</h3>
+                <p>Fill out the booking form or call us. We confirm your reservation instantly via email/SMS.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-icon"><i class="fas fa-road"></i></div>
+                <h3>3. Enjoy Your Ride</h3>
+                <p>We deliver the car to your doorstep or pick you up. Sit back, relax, and enjoy the journey.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fleet Section -->
+    <section class="fleet-section" id="fleet">
+        <h2 class="section-title">Our <span>Fleet</span></h2>
+        <div class="fleet-grid">
+
+            <!-- Car 1: Corolla -->
+            <div class="vehicle-card">
+                <div class="vehicle-img-box">
+                    <span class="vehicle-badge">Economy</span>
+                    <img src="https://images.unsplash.com/photo-1623869675781-80aa31012a5a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Toyota Corolla">
+                </div>
+                <div class="vehicle-info">
+                    <h3>Toyota Corolla</h3>
+                    <div class="features">
+                        <span><i class="fas fa-user"></i> 4 Seats</span>
+                        <span><i class="fas fa-cogs"></i> Auto</span>
+                        <span><i class="fas fa-snowflake"></i> AC</span>
+                    </div>
+                    <div class="price">6k / Day</div>
+                    <button class="book-btn">Book Now</button>
+                </div>
+            </div>
+
+            <!-- Car 2: Civic -->
+            <div class="vehicle-card">
+                <div class="vehicle-img-box">
+                    <span class="vehicle-badge">Comfort</span>
+                    <img src="https://images.unsplash.com/photo-1619682817481-e994891cd1f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Honda Civic">
+                </div>
+                <div class="vehicle-info">
+                    <h3>Honda Civic</h3>
+                    <div class="features">
+                        <span><i class="fas fa-user"></i> 4 Seats</span>
+                        <span><i class="fas fa-cogs"></i> Auto</span>
+                        <span><i class="fas fa-snowflake"></i> AC</span>
+                    </div>
+                    <div class="price">8k / Day</div>
+                    <button class="book-btn">Book Now</button>
+                </div>
+            </div>
+
+            <!-- Car 3: Hiace -->
+            <div class="vehicle-card">
+                <div class="vehicle-img-box">
+                    <span class="vehicle-badge">Group</span>
+                    <img src="https://images.unsplash.com/photo-1559416523-140ddc3d238c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Toyota Hiace">
+                </div>
+                <div class="vehicle-info">
+                    <h3>Toyota Hiace</h3>
+                    <div class="features">
+                        <span><i class="fas fa-user"></i> 15 Seats</span>
+                        <span><i class="fas fa-cogs"></i> Auto</span>
+                        <span><i class="fas fa-snowflake"></i> AC</span>
+                    </div>
+                    <div class="price">14k / Day</div>
+                    <button class="book-btn">Book Now</button>
+                </div>
+            </div>
+
+            <!-- Car 4: Fortuner -->
+            <div class="vehicle-card">
+                <div class="vehicle-img-box">
+                    <span class="vehicle-badge">SUV</span>
+                    <img src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Toyota Fortuner">
+                </div>
+                <div class="vehicle-info">
+                    <h3>Toyota Fortuner</h3>
+                    <div class="features">
+                        <span><i class="fas fa-user"></i> 7 Seats</span>
+                        <span><i class="fas fa-cogs"></i> Auto</span>
+                        <span><i class="fas fa-bolt"></i> 4x4</span>
+                    </div>
+                    <div class="price">12k / Day</div>
+                    <button class="book-btn">Book Now</button>
+                </div>
+            </div>
+
+            <!-- Car 5: Prado -->
+            <div class="vehicle-card">
+                <div class="vehicle-img-box">
+                    <span class="vehicle-badge">Luxury</span>
+                    <img src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Toyota Prado">
+                </div>
+                <div class="vehicle-info">
+                    <h3>Toyota Prado</h3>
+                    <div class="features">
+                        <span><i class="fas fa-user"></i> 7 Seats</span>
+                        <span><i class="fas fa-cogs"></i> Auto</span>
+                        <span><i class="fas fa-gem"></i> Premium</span>
+                    </div>
+                    <div class="price">13k / Day</div>
+                    <button class="book-btn">Book Now</button>
+                </div>
+            </div>
+
+            <!-- Car 6: Land Cruiser -->
+            <div class="vehicle-card">
+                <div class="vehicle-img-box">
+                    <span class="vehicle-badge">VIP</span>
+                    <img src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Land Cruiser">
+                </div>
+                <div class="vehicle-info">
+                    <h3>Land Cruiser V8</h3>
+                    <div class="features">
+                        <span><i class="fas fa-user"></i> 7 Seats</span>
+                        <span><i class="fas fa-cogs"></i> Auto</span>
+                        <span><i class="fas fa-star"></i> VIP</span>
+                    </div>
+                    <div class="price">17k / Day</div>
+                    <button class="book-btn">Book Now</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-content">
+            <h2 class="logo footer-logo">SHAHZAD<span>Movers</span></h2>
+            <p>Reliable luxury and economy car rental services across the city.</p>
+            <div class="contact-details">
+                <p><i class="fas fa-phone"></i> Contact: 0315-2280968 | 0323-2488147</p>
+                <p><i class="fas fa-map-marker-alt"></i> Karachi, Pakistan</p>
+            </div>
+            <div class="socials">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p>&copy; 2026 Muddassir Shahzad Transport. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Menu & Slider -->
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById('navLinks');
+            nav.classList.toggle('active');
+        }
+
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        function nextSlide() {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+
+        setInterval(nextSlide, 5000);
+    </script>
+</body>
+</html>
